@@ -10,7 +10,7 @@
 #include <vector>
 
 //consts
-const unsigned int MIN_NUM_FEATURES = 300; //minimum number of point fetaures
+const unsigned int MIN_NUM_FEATURES = 210; //minimum number of point fetaures
 
 int main(int argc, char *argv[])
 {
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
         orb_detector->detectAndCompute(image, cv::noArray(), point_set, descriptor_set);
 
         //draw points on the image
-        cv::drawKeypoints( image, point_set, image, 255, cv::DrawMatchesFlags::DEFAULT );
+        cv::drawKeypoints( image, point_set, image, 0, cv::DrawMatchesFlags::DEFAULT );
 
     //********************************************************************
 
